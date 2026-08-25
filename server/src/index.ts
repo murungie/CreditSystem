@@ -17,11 +17,11 @@ const startServer = async (): Promise<void> => {
     await connectDB();
 
     app.listen(PORT, '0.0.0.0', () => {
-      console.log('\nLMS Backend Server Started');
-      console.log(`Port:     ${PORT}`);
-      console.log(`API:      http://localhost:${PORT}/api`);
-      console.log(`Health:   http://localhost:${PORT}/health\n`);
-    });
+  console.log('\nLMS Backend Server Started');
+  console.log(`Port: ${PORT}`);
+  console.log(`API: /api`);
+  console.log(`Health: /health\n`);
+});
   } catch (error) {
     console.error('Server failed to start:', error);
     process.exit(1);
